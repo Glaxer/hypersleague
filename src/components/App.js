@@ -1,6 +1,11 @@
-import React from 'react';
-import Signup from './Signup';
+import React from 'react'
 import Dashboard from './Dashboard'
+import Header from './Header'
+import Footer from './Footer'
+import TopList from './TopList'
+import UpcomingMatches from './UpcomingMatches'
+import Signup from './Signup'
+import Profile from './Profile'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute'
 import ForgotPassword from './ForgotPassword'
@@ -11,16 +16,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
-
-    <Container
-      className="d-flex align-items-center justify"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+    <div>
+      <Header />
+      <Container style={{ minHeight: "100vh" }} >
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
+              <Route exact path="/" component={Dashboard} />
+              <Route path="/matches" component={UpcomingMatches} />
+              <Route path="/top" component={TopList} />
+              <PrivateRoute path="/profile" component={Profile} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
@@ -28,9 +33,9 @@ function App() {
             </Switch>
           </AuthProvider>
         </Router>
-      </div>
-    </Container>
-
+      </Container>
+      <Footer />
+    </div >
   )
 }
 
