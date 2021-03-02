@@ -9,7 +9,7 @@ export default function Header() {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="/matches">Kampe</Nav.Link>
-                    <Nav.Link href="/top">Stilling</Nav.Link>
+                    <Nav.Link href="/standings">Stilling</Nav.Link>
                 </Nav>
                 <Nav>
                     {/* <Nav.Link href="profile">Profile</Nav.Link>

@@ -2,7 +2,7 @@ import React from 'react'
 import Dashboard from './Dashboard'
 import Header from './Header'
 import Footer from './Footer'
-import TopList from './TopList'
+import Standings from './Standings'
 import UpcomingMatches from './UpcomingMatches'
 import Signup from './Signup'
 import Profile from './Profile'
@@ -24,7 +24,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Dashboard} />
               <Route path="/matches" component={UpcomingMatches} />
-              <Route path="/top" component={TopList} />
+              <Route path="/top" component={Standings} />
               <PrivateRoute path="/profile" component={Profile} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
