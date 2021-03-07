@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Table } from "react-bootstrap";
+import '../css/Standings.css'
 
 export default function Standings() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 900);
@@ -15,6 +16,7 @@ export default function Standings() {
 
   return (
     <Container style={{ minHeight: "100vh" }}>
+      <h1 className="header">Stilling</h1>
       {isDesktop ? (
         <Table responsive table-layout="fixed">
           <thead>

@@ -1,0 +1,22 @@
+.wrapper {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+  }
+  
+  .header {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .heading {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .text {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 10px 10px 10px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  

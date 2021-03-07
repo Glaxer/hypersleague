@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Container } from "react-bootstrap";
+import '../css/UpcomingMatches.css'
 
 export default function UpcomingMatches() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 900);
@@ -15,6 +16,7 @@ export default function UpcomingMatches() {
 
   return (
     <Container style={{ minHeight: "100vh" }}>
+      <h1 className="header">Kampe</h1>
       {isDesktop ? (
         <Table responsive table-layout="fixed" size="">
           <thead>
