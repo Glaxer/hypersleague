@@ -27,15 +27,15 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <Container>
+      <Container className="mainContent">
         <Row>
           <Col>
-            <Container>
+            <Container className="tableContent">
               {isDesktop ? (
                 <Table responsive table-layout="fixed">
                   <thead>
                     <tr>
-                      <th colSpan="5">Kommende Kampe</th>
+                      <th className="tableHeader" colSpan="5">Kommende Kampe</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -88,7 +88,7 @@ export default function Dashboard() {
                 <Table responsive table-layout="fixed" size="sm">
                   <thead>
                     <tr>
-                      <th colSpan="5">Kommende Kampe</th>
+                      <th className="tableHeader" colSpan="5">Kommende Kampe</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -140,16 +140,17 @@ export default function Dashboard() {
               )}
             </Container>
           </Col>
+        </Row>
+        <Row>
           <Col>
             <div className="dashboard-standings">
-              <h4>Tjek den nuværende stilling for ligaen</h4>
-              <Button href="/standings" variant="dark">
-                Stilling
-              </Button>
+              <h5>Tjek den nuværende stilling for ligaen
+                <a href="/standings"> her</a>
+              </h5>
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container >
     </>
   );
 }

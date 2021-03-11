@@ -135,6 +135,10 @@
 {
   background-color:#6441a5
 }
+.social-icons a.discord:hover
+{
+  background-color: #8594B4
+}
 @media (max-width:767px)
 {
   .social-icons li.title

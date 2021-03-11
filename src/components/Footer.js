@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../images/logo.png";
+import Discord from "../images/discord.svg";
 import "../css/Footer.css";
 
 export default function Footer() {
@@ -88,6 +89,20 @@ export default function Footer() {
                       />
                       <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
                     </svg>
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a class="discord" href="https://discord.com/HypersLeague">
+                  <i class="fa fa-discord">
+                    <img
+                      src={Discord}
+                      alt="Discord SVG"
+                      width="20"
+                      height="20"
+                      class="bi bi-discord"
+                    >
+                    </img>
                   </i>
                 </a>
               </li>
