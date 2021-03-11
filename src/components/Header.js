@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import Logo from "../images/logo.png";
+import '../css/Header.css'
 
 export default function Header() {
   return (
@@ -17,16 +18,16 @@ export default function Header() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/matches">Kampe</Nav.Link>
-          <Nav.Link href="/standings">Stilling</Nav.Link>
+          <Nav.Link className="navLink" href="/matches">Kampe</Nav.Link>
+          <Nav.Link className="navLink" href="/standings">Stilling</Nav.Link>
+          <Nav.Link className="navLink" href="/rules">Regler</Nav.Link>
+          <Nav.Link className="navLink" href="/about">Om os</Nav.Link>
+          <Nav.Link className="navLink" href="/sponsors">Sponsorer</Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href="/rules">Regler</Nav.Link>
-          <Nav.Link href="/about">Om os</Nav.Link>
-          <Nav.Link href="/sponsors">Sponsorer</Nav.Link>
           {/* <Nav.Link href="profile">Profile</Nav.Link>
-                    <Nav.Link href="login">Login</Nav.Link>
-                    <Nav.Link href="signup">Sign Up</Nav.Link> */}
+          <Nav.Link href="login">Login</Nav.Link>
+          <Nav.Link href="signup">Sign Up</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -9,6 +9,8 @@
 
 .headerText {
   color: white;
+  font-size: 5em;
+  margin-bottom: 20px;
 }
 
 .dashboard-standings {

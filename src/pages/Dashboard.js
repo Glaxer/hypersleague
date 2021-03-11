@@ -9,7 +9,7 @@ export default function Dashboard() {
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 text-right">
-              <h1 className="headerText">This is Hypers League</h1>
+              <h1 className="headerText">This is <br /> <b>Hypers League</b></h1>
               <Button variant="dark" size="lg">
                 Tilmeld jer nu
               </Button>
