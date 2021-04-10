@@ -5,20 +5,20 @@ import "../css/Footer.css";
 
 export default function Footer() {
   return (
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
+    <footer className="site-footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12 col-md-6">
             <h6>About</h6>
-            <p class="text-justify">
+            <p className="text-justify">
               Hypers League vil være <i> DEN STØRSTE DANSKE RL LIGA </i> og vi
               arbejder hårdt på at give noget til det danske RL miljø.
             </p>
           </div>
 
-          <div class="col-xs-6 col-md-3">
+          <div className="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
-            <ul class="footer-links">
+            <ul className="footer-links">
               <li>
                 <a href="/matches">Kampe</a>
               </li>
@@ -37,29 +37,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div class="col-xs-6 col-md-3">
+          <div className="col-xs-6 col-md-3">
             <img src={Logo} width="190" height="190" alt="Hypers League logo" />
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-sm-6 col-xs-12">
+            <p className="copyright-text">
               Copyright &copy; 2021 All Rights Reserved by Hypers League
             </p>
           </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
+          <div className="col-md-4 col-sm-6 col-xs-12">
+            <ul className="social-icons">
               <li>
-                <a class="twitter" href="https://twitter.com/HypersLeague">
-                  <i class="fa fa-twitter">
+                <a className="twitter" href="https://twitter.com/HypersLeague">
+                  <i className="fa fa-twitter">
                     <svg
                       width="20"
                       height="20"
                       fill="currentColor"
-                      class="bi bi-twitter"
+                      className="bi bi-twitter"
                     >
                       <path
                         d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685
@@ -75,13 +75,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a class="twitch" href="https://twitch.tv/HypersLeague">
-                  <i class="fa fa-twitch">
+                <a className="twitch" href="https://twitch.tv/HypersLeague">
+                  <i className="fa fa-twitch">
                     <svg
                       width="20"
                       height="20"
                       fill="currentColor"
-                      class="bi bi-twitch"
+                      className="bi bi-twitch"
                     >
                       <path
                         d="M3.857 0L1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714
@@ -93,14 +93,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a class="discord" href="https://discord.com/HypersLeague">
-                  <i class="fa fa-discord">
+                <a className="discord" href="https://discord.com/HypersLeague">
+                  <i className="fa fa-discord">
                     <img
                       src={Discord}
                       alt="Discord SVG"
                       width="20"
                       height="20"
-                      class="bi bi-discord"
+                      className="bi bi-discord"
                     >
                     </img>
                   </i>

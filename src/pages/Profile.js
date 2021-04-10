@@ -13,7 +13,7 @@ export default function Profile() {
 
         try {
             await logout()
-            history.push("/login")
+            history.push("/")
         } catch {
             setError("Failed to log out")
         }
@@ -22,23 +22,22 @@ export default function Profile() {
     return (
         <Container
             className="d-flex align-items-center justify"
-            style={{ minHeight: "100vh" }}
-        >
+            style={{ minHeight: "100vh" }}>
             <div className="w-100" style={{ maxWidth: "400px" }}>
                 <Card>
                     <Card.Body>
                         <h2 className="text-center mb-4">Profile</h2>
                         {error && <Alert variant="danger">{error}</Alert>}
                         <strong>Email:</strong> {currentUser.email}
-                        <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
+                        <Link to="/update-profile" className="btn btn-dark w-100 mt-3">
                             Update Profile
-          </Link>
+                        </Link>
                     </Card.Body>
                 </Card>
                 <div className="w-100 text-center mt-2">
                     <Button variant="link" onClick={handleLogout}>
                         Log Out
-        </Button>
+                    </Button>
                 </div>
             </div>
         </Container>
