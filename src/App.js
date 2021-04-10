@@ -11,17 +11,18 @@ import About from "./pages/About";
 import Sponsors from "./pages/Sponsors";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
-import Profile from "./pages/Profile";
-import UpdateProfile from "./pages/UpdateProfile";
+import AdminPanel from "./pages/AdminPanel";
+// import Profile from "./pages/Profile";
+// import UpdateProfile from "./pages/UpdateProfile";
 // import Signup from "./pages/Signup";
 // import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
     <>
-      <Header />
-      <Router>
-        <AuthProvider>
+      <AuthProvider>
+        <Header />
+        <Router>
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route path="/matches" component={UpcomingMatches} />
@@ -30,14 +31,15 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/login" component={Login} />
-            <PrivateRoute path="/profile" component={Profile} />
-            <PrivateRoute path="/update-profile" component={UpdateProfile} />
-            {/* <Route path="/signup" component={Signup} />
+            <PrivateRoute path="/admin" component={AdminPanel} />
+            {/* <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/update-profile" component={UpdateProfile} /> */
+            /* <Route path="/signup" component={Signup} />
             <Route path="/forgot-password" component={ForgotPassword} /> */}
           </Switch>
-        </AuthProvider>
-      </Router>
-      <Footer />
+        </Router>
+        <Footer />
+      </AuthProvider>
     </>
   );
 }
