@@ -1,13 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Table, Container } from "react-bootstrap";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import "../css/UpcomingMatches.css";
 
 export default function UpcomingMatches() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 900);
+  const [matches, setMatches] = useState([]);
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 900);
   };
+
+  useEffect(() => {
+    let unsubscribe =
+      firebase.firestore().collection('Matches')
+        .onSnapshot(snapshot => {
+          let newMatches = snapshot.docChanges()
+          newMatches.forEach(doc => {
+            setMatches(prevMatches => [...prevMatches, doc.doc.data()])
+          })
+        })
+    return () => unsubscribe();
+  }, [])
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
@@ -26,58 +41,17 @@ export default function UpcomingMatches() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
+              {matches.map(e => {
+                return (
+                  <tr key={e.Id}>
+                    <td>{e.Date}</td>
+                    <td>{e.AwayTeam}</td>
+                    <td>vs.</td>
+                    <td>{e.HomeTeam}</td>
+                    <td>{e.Format}</td>
+                  </tr>
+                )
+              })}
             </tbody>
           </Table>
         ) : (
@@ -88,58 +62,17 @@ export default function UpcomingMatches() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Tidspunkt</td>
-                <td>Team 1</td>
-                <td>vs.</td>
-                <td>Team 2</td>
-                <td>Format</td>
-              </tr>
+              {matches.map(e => {
+                return (
+                  <tr key={e.Id}>
+                    <td>{e.Date}</td>
+                    <td>{e.AwayTeam}</td>
+                    <td>vs.</td>
+                    <td>{e.HomeTeam}</td>
+                    <td>{e.Format}</td>
+                  </tr>
+                )
+              })}
             </tbody>
           </Table>
         )}

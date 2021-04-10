@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Container, Table } from "react-bootstrap";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import "../css/Standings.css";
 
 export default function Standings() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 900);
+  const [teams, setTeams] = useState([]);
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 900);
   };
+
+  function sortTeams(map) {
+    map.sort((a, b) => b.Points - a.Points);
+    return map;
+  }
+
+  useEffect(() => {
+    let unsubscribe =
+      firebase.firestore().collection('Teams')
+        .onSnapshot(snapshot => {
+          let newTeams = snapshot.docChanges()
+          newTeams.forEach(doc => {
+            setTeams(prevTeams => [...prevTeams, doc.doc.data()])
+          })
+        });
+    return () => unsubscribe();
+  }, [])
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
@@ -32,92 +52,19 @@ export default function Standings() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Hold 1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 2</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 3</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 4</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 5</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 6</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 7</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 8</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
+              {sortTeams(teams).map(e => {
+                return (
+                  <tr key={e.Id}>
+                    <td>{e.Name}</td>
+                    <td>{e.Games}</td>
+                    <td>{e.Wins}</td>
+                    <td>{e.Losses}</td>
+                    <td>{e.Draws}</td>
+                    <td>{e.Difference}</td>
+                    <td>{e.Points}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </Table>
         ) : (
@@ -134,92 +81,19 @@ export default function Standings() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Hold 1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 2</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 3</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 4</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 5</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 6</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 7</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Hold 8</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
+              {sortTeams(teams).map(e => {
+                return (
+                  <tr key={e.Id}>
+                    <td>{e.Name}</td>
+                    <td>{e.Games}</td>
+                    <td>{e.Wins}</td>
+                    <td>{e.Losses}</td>
+                    <td>{e.Draws}</td>
+                    <td>{e.Difference}</td>
+                    <td>{e.Points}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </Table>
         )}
