@@ -31,7 +31,7 @@ export default function AdminPanel() {
             HomeScore: homeScoreRef.current.value,
             HomeTeam: homeTeamRef.current.value,
             Season: matchSeasonRef.current.value,
-            Foamt: formatRef.current.value
+            Format: formatRef.current.value
         })
             .then((docRef) => {
                 console.log("Document writting with ID: ", docRef.id);
