@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <div className="col-xs-6 col-md-3">
-            <img src={Logo} width="190" height="190" alt="Hypers League logo" />
+            <img src={Logo} width="150" height="190" alt="Hypers League logo" />
           </div>
         </div>
       </div>

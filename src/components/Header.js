@@ -26,7 +26,7 @@ export default function Header() {
       <Navbar.Brand href="/">
         <img
           src={Logo}
-          width="50"
+          width="40"
           height="50"
           className="d-inline-block align-top"
           alt="Hypers League logo"
