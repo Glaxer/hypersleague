@@ -17,10 +17,12 @@ export default function About() {
           League liga, ligesom vi ser hos flere af vores nordiske nabolande, og
           tog springet for at skabe det der blev til Hypers League.
         </p>
-        <div className="generic-about-us"></div>
+
         <Container className="info-text">
+
           <Row>
             <Col className="col-left">
+              <div className="generic-about-Fuzz"></div>
               <p className="text">
                 Lasse “Fuzz” Geugjes har +4 års erfaring inden for
                 esportverdenen både fra hans arbejde hos Copenhagen Flames med
@@ -30,6 +32,7 @@ export default function About() {
               </p>
             </Col>
             <Col className="col-right">
+              <div className="generic-about-Bas"></div>
               <p className="text">
                 Caroline “Bascounter” Stokholm Caspersen har +2 års erfaring
                 inden for esportverdenen bl.a. fra hendes tid som Streaming &
@@ -41,6 +44,7 @@ export default function About() {
               </p>
             </Col>
           </Row>
+
         </Container>
       </div>
     </Container>

@@ -3,10 +3,22 @@
   padding: 10px;
 }
 
-.generic-about-us {
-  background-image: url("../images/generic-about-us.jpg");
-  alt: "Fuzz & Bascounter";
-  height: 80vh;
+.generic-about-Fuzz {
+  background-image: url("../images/fuzz.jpg");
+  alt: "Fuzz";
+  height: 60vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.generic-about-Bas {
+  background-image: url("../images/bascounter.jpg");
+  alt: "Bascounter";
+  height: 60vh;
   min-height: 500px;
   background-size: cover;
   background-position: center;
