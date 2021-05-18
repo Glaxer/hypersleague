@@ -10,12 +10,12 @@ export default function Dashboard() {
       <div className="bg-image">
         {/* <div className="container h-100"> */}
         {/* <div className="row h-100 align-items-center"> */}
-        <div className="col-12 text-center">
-          <h1 className="headerText">Raketligaen <br />Kommer Snart</h1>
-          {/* <Button variant="dark" size="lg">
+        {/* <div className="text-center"> */}
+        <h1 className="headerText">KOMMER SNART</h1>
+        {/* <Button variant="dark" size="lg">
                 Tilmeld jer nu
               </Button> */}
-        </div>
+        {/* </div> */}
         {/* </div> */}
         {/* </div> */}
       </div>

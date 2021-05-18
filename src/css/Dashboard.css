@@ -9,6 +9,11 @@
 
 .headerText {
   color: white;
-  font-size: 5em;
+  font-size: 4em;
+  font-family: 'Bebas Neue';
   /* margin-top: 20px; */
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
