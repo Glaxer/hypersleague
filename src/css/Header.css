@@ -1,4 +1,9 @@
 .navLink {
     font-size: 1.5em;
     margin-right: 5px;
+    font-family: "Bebas Neue", sans-serif;
+}
+.navLogin {
+    font-size: 1.5em;
+    font-family: "Bebas Neue", sans-serif;
 }

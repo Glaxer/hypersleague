@@ -40,7 +40,7 @@ export default function Standings() {
         <h1 className="header">Stilling</h1>
         {isDesktop ? (
           <Table responsive table-layout="fixed">
-            <thead>
+            <thead className="tableHeader">
               <tr>
                 <th colSpan="1">Hold</th>
                 <th>K</th>
@@ -51,7 +51,7 @@ export default function Standings() {
                 <th>P</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {sortTeams(teams).map(e => {
                 return (
                   <tr key={e.Id}>
@@ -69,7 +69,7 @@ export default function Standings() {
           </Table>
         ) : (
           <Table responsive table-layout="fixed" size="sm">
-            <thead>
+            <thead className="tableHeader">
               <tr>
                 <th colSpan="1">Hold</th>
                 <th>K</th>
@@ -80,7 +80,7 @@ export default function Standings() {
                 <th>P</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {sortTeams(teams).map(e => {
                 return (
                   <tr key={e.Id}>

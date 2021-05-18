@@ -50,7 +50,7 @@ export default function Header() {
           </Nav>
         ) : (
           <Nav>
-            <Nav.Link href="login">Login</Nav.Link>
+            <Nav.Link className="navLogin" href="login">Login</Nav.Link>
           </Nav>
         )}
 

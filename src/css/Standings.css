@@ -5,4 +5,13 @@
 
 .header {
     margin: 10px 10px 10px 10px;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  .tableHeader {
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  .tableBody {
+    font-family: "Bebas Neue", sans-serif;
   }

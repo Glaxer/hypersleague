@@ -23,8 +23,8 @@ export default function Rules() {
         </p>
         <h3 className="heading">Support/spørgsmål: </h3>
         <p className="text">
-          - Henvend dig inde på vores
-          <a href="https://discord.gg/hnefTTJ"> Discord</a>
+          - Henvend dig inde på vores {" "}
+          <a href="https://discord.gg/hnefTTJ">Discord</a>
         </p>
         <h3 className="heading">Krav for at spille: </h3>
         <p className="text">
@@ -46,7 +46,7 @@ export default function Rules() {
         </p>
         <h3 className="heading">Settings: </h3>
         <p className="text">
-          - Kampe bliver streamet på vores
+          - Kampe bliver streamet på vores {" "}
           <a href="https://Twitch.tv/HypersLeague">Twitch kanal</a> <br />
           - Det er tilladt at streame sine egne kampe, såfremt kampene ikke
           bliver streamet af os. <br />

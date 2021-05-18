@@ -35,12 +35,12 @@ export default function UpcomingMatches() {
         <h1 className="header">Kampe</h1>
         {isDesktop ? (
           <Table responsive table-layout="fixed" size="">
-            <thead>
+            <thead className="tableHeader">
               <tr>
                 <th colSpan="5">Uge</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {matches.map(e => {
                 return (
                   <tr key={e.Id}>
@@ -56,12 +56,12 @@ export default function UpcomingMatches() {
           </Table>
         ) : (
           <Table responsive table-layout="fixed" size="sm">
-            <thead>
+            <thead className="tableHeader">
               <tr>
                 <th colSpan="5">Uge</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tableBody">
               {matches.map(e => {
                 return (
                   <tr key={e.Id}>
