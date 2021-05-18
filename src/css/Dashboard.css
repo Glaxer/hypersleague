@@ -1,7 +1,7 @@
 .bg-image {
   height: 100vh;
   min-height: 500px;
-  background-image: url("../images/dashboard-signup.jpg");
+  background-image: url("../images/frontpage_cover.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,15 +10,5 @@
 .headerText {
   color: white;
   font-size: 5em;
-  margin-bottom: 20px;
-}
-
-.mainContent {
-  padding: 50px;
-}
-
-.dashboard-standings {
-  margin: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* margin-top: 20px; */
 }
