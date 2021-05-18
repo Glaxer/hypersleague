@@ -1,8 +1,8 @@
 .bg-image {
   height: 100vh;
   min-height: 500px;
-  background-image: url("../images/frontpage_cover.png");
-  background-size: cover;
+  background-image: url("../images/frontpage.png");
+  /* background-size: cover; */
   background-position: center;
   background-repeat: no-repeat;
 }
